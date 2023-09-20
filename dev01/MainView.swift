@@ -17,14 +17,14 @@ struct MainView: View {
                         Label("Counter", systemImage: "digitalcrown.horizontal.arrow.counterclockwise")
                     }
                     .tag(1)
-                HomeView()
+                GlossaryView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
                     .tag(2)
-                GlossaryView()
+                MapView()
                     .tabItem {
-                        Label("Glossary", systemImage: "sportscourt")
+                        Label("Map", systemImage: "map.fill")
                     }
                     .tag(3)
             }

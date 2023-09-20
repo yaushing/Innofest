@@ -13,13 +13,18 @@ struct InformationView: View {
     @State var content: [[String]]
     
     var body: some View {
-        VStack {
-            Text(title).multilineTextAlignment(.center).font(.system(size: 36)).bold()
-                List {
-                    ForEach(content, id: \.self) { helpUrl in
-                        Link(helpUrl[0], destination: URL(string: helpUrl[1])!)
-                    }
+        NavigationStack {
+            List {
+                ForEach(content, id: \.self) { helpUrl in
+                    Link(helpUrl[0], destination: URL(string: helpUrl[1])!)
                 }
+            }.navigationTitle(title)
         }
+    }
+}
+
+struct InformationView_Previews: PreviewProvider {
+    static var previews: some View {
+        InformationView(title: "LL", content: [["FIBA", "https://www.apple.com"], ["billi baba", "https://sst.edu.sg"]])
     }
 }

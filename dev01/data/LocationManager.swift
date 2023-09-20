@@ -8,6 +8,14 @@
 import MapKit
 import CoreLocation
 
+func calculateDelta(latitude: Double, longitude: Double) -> Double {
+    let delta: Double = 0.05
+    for location in MapLocations {
+        print(abs(latitude - location.latitude) + abs(longitude - location.longitude))
+    }
+    return delta
+}
+
 class LocationManager: NSObject,CLLocationManagerDelegate, ObservableObject {
     @Published var region = MKCoordinateRegion()
     private let manager = CLLocationManager()
@@ -22,7 +30,7 @@ class LocationManager: NSObject,CLLocationManagerDelegate, ObservableObject {
             locations.last.map {
                 region = MKCoordinateRegion(
                     center: CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude),
-                    span: MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025)
+                    span: MKCoordinateSpan(latitudeDelta: calculateDelta(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude), longitudeDelta: calculateDelta(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude))
                 )
             }
         }

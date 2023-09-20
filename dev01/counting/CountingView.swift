@@ -63,6 +63,7 @@ struct CountingView: View {
     var body: some View {
         VStack {
             Text("To win, you need to win \(matches/2+1) match(es)")
+            Text(deuceEnabled ? "Every match requires at least \(pointsPerMatch) points to win that match" : "Every match requires \(pointsPerMatch) to win that match")
             Text(deuceEnabled ? "Deuce mode enabled - two point lead to win match\n\n" : "Deuce mode off\n\n").multilineTextAlignment(.center)
             HStack {
                 VStack {
@@ -77,7 +78,7 @@ struct CountingView: View {
                         if colorScheme == .dark {
                             Text("+").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                         } else {
-                            Text("+").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                            Text("+").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                         }
                     }
                 }
@@ -94,7 +95,7 @@ struct CountingView: View {
                         if colorScheme == .dark {
                             Text("+").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                         } else {
-                            Text("+").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                            Text("+").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                         }
                     }
                 }

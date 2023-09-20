@@ -54,7 +54,7 @@ struct CounterView: View {
                         if colorScheme == .dark {
                             Text("-").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                         } else {
-                            Text("-").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                            Text("-").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                         }
                     }
                     Button {
@@ -64,7 +64,7 @@ struct CounterView: View {
                         if colorScheme == .dark {
                             Text("+").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                         } else {
-                            Text("+").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                            Text("+").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                         }
                     }
                 }
@@ -81,7 +81,7 @@ struct CounterView: View {
                         if colorScheme == .dark {
                             Text("-").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                         } else {
-                            Text("-").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                            Text("-").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                         }
                     }
                     Button {
@@ -90,7 +90,7 @@ struct CounterView: View {
                         if colorScheme == .dark {
                             Text("+").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                         } else {
-                            Text("+").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                            Text("+").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                         }
                     }
                 }
@@ -103,7 +103,7 @@ struct CounterView: View {
                         if colorScheme == .dark {
                             Text("Toggle On/off").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                         } else {
-                            Text("Toggle On/off").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                            Text("Toggle On/off").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                         }
                     }
                 }
@@ -118,7 +118,7 @@ struct CounterView: View {
                                 if colorScheme == .dark {
                                     Text(key).bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                                 } else {
-                                    Text(key).bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                                    Text(key).bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                                 }
                             }
                         }
@@ -132,7 +132,7 @@ struct CounterView: View {
                     if colorScheme == .dark {
                         Text("Start").bold().padding().foregroundColor(.black).background(.white).cornerRadius(20.0)
                     } else {
-                        Text("Start").bold().padding().foregroundColor(.white).background(.black).cornerRadius(20.0)
+                        Text("Start").bold().padding().foregroundColor(.white).background(.gray).cornerRadius(20.0)
                     }
                 }
                 
